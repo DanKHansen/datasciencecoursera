@@ -35,7 +35,6 @@ train_data <- cbind(subj_data_train,y_data_train,x_data_train) #merge into train
 merged_set <- rbind(test_data,train_data)
 #Replace the activity ID with activity labels instead
 merged_set$Activityname <- factor(merged_set$Activityname, act_lbl$V1, labels = act_lbl$V2)
-order(merged_set)
 
 #A second, independent tidy data set with the average of each variable 
 #for each activity and each subject.
